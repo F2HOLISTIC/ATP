@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mawasiliano — Amesco Truck Parts</title>
+  <meta name="description" content="Wasiliana na Amesco Truck Parts. Simu: 0788394813. Temeke, Dar es Salaam.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.jpg" alt="Amesco Truck Parts Logo">
+      <div class="nav-brand">
+        <span>AMESCO</span>
+        <span>Truck Parts</span>
+      </div>
+    </a>
+
+    <div class="hamburger" onclick="toggleMenu()" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Nyumbani</a></li>
+      <li><a href="about.html">Kuhusu Sisi</a></li>
+      <li><a href="contact.html" class="active">Mawasiliano</a></li>
+      <li><a href="contact.html" class="nav-cta">Pata Msaada</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="contact-hero">
+    <span style="display:inline-block; background:var(--red); color:white; font-family:'Rajdhani',sans-serif; font-size:12px; font-weight:700; letter-spacing:3px; text-transform:uppercase; padding:6px 20px; border-radius:30px; margin-bottom:20px;">Tuko Hapa Kukusaidia</span>
+    <h1>WASILIANA <span>NASI</span></h1>
+    <p>Una gari lililoharibiwa? Unahitaji spea haraka? Tupigie simu sasa hivi!</p>
+  </section>
+
+  <!-- QUICK CALL BAR -->
+  <div style="background:var(--red); padding:20px 40px; text-align:center;">
+    <a href="tel:0788394813" style="color:white; text-decoration:none; font-family:'Bebas Neue',cursive; font-size:clamp(22px,4vw,38px); letter-spacing:3px;">
+      📞 PIGA SIMU SASA: 0788 394 813
+    </a>
+  </div>
+
+  <!-- CONTACT SECTION -->
+  <section class="section">
+    <div class="contact-grid">
+
+      <!-- INFO CARD -->
+      <div class="contact-info-card">
+        <h3>TAARIFA ZA MAWASILIANO</h3>
+
+        <div class="info-item">
+          <div class="info-icon">📞</div>
+          <div class="info-text">
+            <strong>Simu</strong>
+            <span>0788 394 813</span>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">📍</div>
+          <div class="info-text">
+            <strong>Mahali</strong>
+            <span>Temeke, Dar es Salaam, Tanzania</span>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">👤</div>
+          <div class="info-text">
+            <strong>CEO</strong>
+            <span>Amiry Mkufya</span>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">🚛</div>
+          <div class="info-text">
+            <strong>Bidhaa</strong>
+            <span>Spea za HOWO & FAW</span>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">⏰</div>
+          <div class="info-text">
+            <strong>Masaa ya Biashara</strong>
+            <span>Jumatatu – Jumamosi: 7:00 AM – 7:00 PM</span>
+          </div>
+        </div>
+
+        <!-- DIRECT CALL BTN -->
+        <a href="tel:0788394813" class="btn-primary" style="display:block; text-align:center; margin-top:25px;">
+          📞 Piga Simu Moja kwa Moja
+        </a>
+      </div>
+
+      <!-- FORM -->
+      <div class="contact-form">
+        <h3>TUMA UJUMBE WAKO</h3>
+
+        <div class="form-group">
+          <label>Jina Lako *</label>
+          <input type="text" id="name" placeholder="Mfano: Juma Hassan" required>
+        </div>
+
+        <div class="form-group">
+          <label>Namba ya Simu *</label>
+          <input type="tel" id="phone" placeholder="Mfano: 0712 345 678" required>
+        </div>
+
+        <div class="form-group">
+          <label>Aina ya Gari</label>
+          <select id="vehicle">
+            <option value="">— Chagua aina ya gari —</option>
+            <option value="howo">HOWO Truck</option>
+            <option value="faw">FAW Truck</option>
+            <option value="other">Nyingine</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Spea Unayohitaji</label>
+          <select id="part">
+            <option value="">— Chagua aina ya spea —</option>
+            <option value="engine">Engine Parts / Injini</option>
+            <option value="gearbox">Gearbox / Transmission</option>
+            <option value="suspension">Suspension / Magurudumu</option>
+            <option value="brakes">Brakes / Breki</option>
+            <option value="cooling">Cooling System</option>
+            <option value="electrical">Electrical / Umeme</option>
+            <option value="other">Nyingine</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Ujumbe Wako</label>
+          <textarea id="message" placeholder="Elezea tatizo lako au spea unayohitaji..."></textarea>
+        </div>
+
+        <button type="button" class="btn-submit" onclick="sendMessage()">
+          📤 Tuma Ujumbe
+        </button>
+
+        <div id="form-response" style="display:none; margin-top:20px; padding:15px; border-radius:5px; text-align:center; font-family:'Rajdhani',sans-serif; font-size:16px; font-weight:600;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP PLACEHOLDER -->
+  <section style="background:var(--dark-blue); padding:60px 40px; text-align:center;">
+    <span style="font-family:'Rajdhani',sans-serif; font-size:12px; font-weight:700; letter-spacing:4px; text-transform:uppercase; color:var(--red);">Mahali Tulipo</span>
+    <h2 style="font-family:'Bebas Neue',cursive; font-size:46px; letter-spacing:3px; color:white; margin:10px 0 25px;">TEMEKE, DAR ES SALAAM</h2>
+    <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.15); border-radius:10px; padding:50px; max-width:600px; margin:0 auto;">
+      <div style="font-size:60px; margin-bottom:20px;">📍</div>
+      <p style="color:rgba(255,255,255,0.7); font-size:18px; line-height:1.7;">
+        <strong style="color:white;">Amesco Truck Parts</strong><br>
+        Temeke, Dar es Salaam<br>
+        Tanzania
+      </p>
+      <a href="https://maps.google.com?q=Temeke+Dar+es+Salaam+Tanzania" target="_blank" class="btn-primary" style="display:inline-block; margin-top:20px;">
+        🗺️ Fungua Ramani
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo-wrap">
+          <img src="images/logo.jpg" alt="Amesco Logo">
+          <div>
+            <div style="font-family:'Bebas Neue',cursive; font-size:20px; letter-spacing:2px; color:white;">AMESCO</div>
+            <div style="font-family:'Rajdhani',sans-serif; font-size:11px; letter-spacing:2px; color:var(--red); text-transform:uppercase;">Truck Parts</div>
+          </div>
+        </div>
+        <p>Wataalam wa spea za magari mazito — HOWO na FAW. Tunakufikia kwa haraka, Temeke Dar es Salaam.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Viungo</h4>
+        <ul>
+          <li><a href="index.html">Nyumbani</a></li>
+          <li><a href="about.html">Kuhusu Sisi</a></li>
+          <li><a href="contact.html">Mawasiliano</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Wasiliana</h4>
+        <div class="contact-item">
+          <span class="icon">📞</span>
+          <span>0788 394 813</span>
+        </div>
+        <div class="contact-item">
+          <span class="icon">📍</span>
+          <span>Temeke, Dar es Salaam, Tanzania</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Amesco Truck Parts. Haki Zote Zimehifadhiwa. | Temeke, Dar es Salaam</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
